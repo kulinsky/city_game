@@ -60,7 +60,7 @@ for city in city_array:
 #        print u'Закончен поиск до города: %s' % input
         for j in job():
             total.update({len(j) : j})
-    job_server.print_stats()
+#    job_server.print_stats()
 stop = datetime.datetime.now()
 
 result = total.get(max(total))
