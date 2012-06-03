@@ -21,6 +21,7 @@ for line in open(filename):
 exclude = [u'Ь',u'Ъ',u'Ы']
 total = {}
 orgraph = {}
+
 for city in city_array:
     edge = []
     for c in [x for x in city_array if x != city]:
