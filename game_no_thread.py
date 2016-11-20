@@ -1,8 +1,8 @@
 # -*- encoding: utf-8 -*-
-__author__ = 'antonio'
 
 import datetime
 import sys
+
 
 city_array = []
 
@@ -12,9 +12,11 @@ except IndexError:
     print 'example: python script.py cities.txt'
     sys.exit()
 
+    
 for line in open(filename):
     city_array.append(line.strip().decode('utf-8'))
 
+    
 exclude = [u'Ь',u'Ъ',u'Ы']
 orgraph = {}
 for city in city_array:
@@ -28,6 +30,7 @@ for city in city_array:
                 edge.insert(1, c)
     orgraph.update({city: edge})
 
+    
 def find_all_paths(graph, start, end, path=[]):
     path = path + [start]
     if start == end:
@@ -41,6 +44,7 @@ def find_all_paths(graph, start, end, path=[]):
             for newpath in newpaths:
                 paths.append(newpath)
     return paths
+
 
 total = {}
 start = datetime.datetime.now()
